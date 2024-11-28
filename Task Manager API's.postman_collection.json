@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"Virat kohli\",\r\n    \"email\":\"viratinf\",\r\n    \"password\":\"123\"\r\n}",
+					"raw": "{\r\n    \"name\":\"Virat kohli\",\r\n    \"email\":\"viratinfo@email.com\",\r\n    \"password\":\"password\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,7 +43,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \r\n    \"email\":\"viratinfo@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+					"raw": "{\r\n    \r\n    \"email\":\"viratinfo@gmail.com\",\r\n    \"password\":\"password\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -73,7 +73,7 @@
 				"header": [
 					{
 						"key": "authorization",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYjk1NzQzZC1hOTE4LTQyOWQtYmYwNi0yMTRhMmE2ZjUxYTAiLCJpYXQiOjE3MzI4MDA4OTQsImV4cCI6MTczMjgwNDQ5NH0.GbOcQdST1_Pa7oac2ayPKMY2Vfz7EEh8aoamyeDTMGU",
+						"value": "",
 						"type": "text"
 					}
 				],
