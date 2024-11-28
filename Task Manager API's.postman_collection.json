@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "745825d0-4c05-41c8-83f5-d6d8b4ca5a86",
+		"name": "Task Manager API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15818447"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Virat kohli\",\r\n    \"email\":\"viratinf\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"email\":\"viratinfo@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYjk1NzQzZC1hOTE4LTQyOWQtYmYwNi0yMTRhMmE2ZjUxYTAiLCJpYXQiOjE3MzI4MDA4OTQsImV4cCI6MTczMjgwNDQ5NH0.GbOcQdST1_Pa7oac2ayPKMY2Vfz7EEh8aoamyeDTMGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test Task\",\r\n    \"description\": \"test description\",\r\n    \"status\": \"done\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tasks/createTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks",
+						"createTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET User tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYjk1NzQzZC1hOTE4LTQyOWQtYmYwNi0yMTRhMmE2ZjUxYTAiLCJpYXQiOjE3MzI4MDA4OTQsImV4cCI6MTczMjgwNDQ5NH0.GbOcQdST1_Pa7oac2ayPKMY2Vfz7EEh8aoamyeDTMGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test Task\",\r\n    \"description\": \"test description\",\r\n    \"status\": \"done\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tasks/gettasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks",
+						"gettasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYjk1NzQzZC1hOTE4LTQyOWQtYmYwNi0yMTRhMmE2ZjUxYTAiLCJpYXQiOjE3MzI4MDA4OTQsImV4cCI6MTczMjgwNDQ5NH0.GbOcQdST1_Pa7oac2ayPKMY2Vfz7EEh8aoamyeDTMGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test Task updated again\",\r\n    \"description\": \"test description\",\r\n    \"status\": \"done\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tasks/updatetask/c860b3e8-577d-4b40-9392-318e3e391a0b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks",
+						"updatetask",
+						"c860b3e8-577d-4b40-9392-318e3e391a0b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYjk1NzQzZC1hOTE4LTQyOWQtYmYwNi0yMTRhMmE2ZjUxYTAiLCJpYXQiOjE3MzI4MDA4OTQsImV4cCI6MTczMjgwNDQ5NH0.GbOcQdST1_Pa7oac2ayPKMY2Vfz7EEh8aoamyeDTMGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test Task updated again\",\r\n    \"description\": \"test description\",\r\n    \"status\": \"done\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tasks/deletetask/c860b3e8-577d-4b40-9392-318e3e391a0b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks",
+						"deletetask",
+						"c860b3e8-577d-4b40-9392-318e3e391a0b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update status",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYjk1NzQzZC1hOTE4LTQyOWQtYmYwNi0yMTRhMmE2ZjUxYTAiLCJpYXQiOjE3MzI4MDA4OTQsImV4cCI6MTczMjgwNDQ5NH0.GbOcQdST1_Pa7oac2ayPKMY2Vfz7EEh8aoamyeDTMGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test Task updated again\",\r\n    \"description\": \"test description\",\r\n    \"status\": \"done\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tasks/deletetask/378dc0b5-2fd7-4d78-977c-3f0b8c3e953a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks",
+						"deletetask",
+						"378dc0b5-2fd7-4d78-977c-3f0b8c3e953a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
